@@ -18,4 +18,7 @@ Response will return a Http 201 Status Code for a created object.
 ### Create New Transaction: "/transactions"
 ![image](https://user-images.githubusercontent.com/20051089/179563665-65917658-e65f-4aab-9677-c23951f3067c.png)
 
+### Get Customer By ID Response Sample: "/customers/1"
+![image](https://user-images.githubusercontent.com/20051089/179564417-d418ff41-aad9-4b51-aa81-57402db12378.png)
+
 
