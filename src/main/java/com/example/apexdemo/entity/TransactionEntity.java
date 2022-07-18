@@ -11,7 +11,7 @@ import static com.example.apexdemo.constant.TransactionConstants.*;
 public class TransactionEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "transaction_id")
     private Long transactionId;
 
@@ -25,7 +25,7 @@ public class TransactionEntity {
     private double transactionPrice;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customer_id", nullable = false)
+    @JoinColumn(name = "customer_id")
     @JsonIgnore
     private CustomerEntity customerEntity;
 
@@ -39,6 +39,8 @@ public class TransactionEntity {
     private void onLoad() {
         this.points = calculatePointsForTransaction((int) transactionPrice);
     }
+
+    public TransactionEntity() {}
 
     public Long getTransactionId() {
         return transactionId;
