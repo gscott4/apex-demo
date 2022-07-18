@@ -3,9 +3,7 @@ package com.example.apexdemo.controller;
 import com.example.apexdemo.dto.CustomerDto;
 import com.example.apexdemo.entity.CustomerEntity;
 import com.example.apexdemo.service.CustomerService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,8 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
-
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -37,8 +33,7 @@ class CustomerControllerTest {
         CustomerDto customerDto = customerController.getCustomerById(1);
         assertNotNull(customerDto);
 
-        CustomerEntity customerEntity = customerDto.getCustomerEntity();
-        assertEquals(customerEntity.getCustomerName(), "Grayson");
+        assertEquals(customerDto.getCustomerName(), "Grayson");
 
     }
 

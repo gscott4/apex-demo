@@ -7,6 +7,4 @@ public class TransactionConstants {
     public static final int TIER1_POINTS = 1;
     public static final int TIER2_POINTS = 2;
 
-
-
 }
